@@ -1,0 +1,69 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #003366;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #003366;
+  color: white;
+}
+header img {
+  width: 40px;
+  margin-right: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero {
+  background: url('hero-printer.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.about, .services {
+  padding: 60px 40px;
+  text-align: center;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.service-card {
+  width: 280px;
+  background: #f5faff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #003366;
+  color: white;
+}
