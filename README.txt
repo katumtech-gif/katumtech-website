@@ -1,10 +1,9 @@
 
-Katumtech Engineers - Final professional website package
---------------------------------------------------------
+Katumtech Engineers - Verified website package
 Files included:
 - index.html, about.html, services.html, contact.html
 - css/styles.css
-- assets/ (hero.svg, office.svg, technician.svg, logo.svg, konica.svg, hp.svg, canon.svg, ricoh.svg, kyocera.svg)
+- assets/ (logo.svg, hero.svg, office.svg, technician.svg, konica.svg, hp.svg, canon.svg, ricoh.svg, kyocera.svg)
 
 How to publish:
 1. Extract the ZIP locally.
@@ -13,6 +12,4 @@ How to publish:
 4. Commit directly to the main branch.
 5. Vercel will auto-deploy. Wait ~30-60 seconds and visit https://katumtechengineers.com
 
-Notes:
-- The Request a Quote form uses mailto: to send to katumtech@gmail.com. Some browsers open the default email client.
-- If you prefer form submissions via Formspree or similar, I can change the form action.
+If images don't show, ensure the assets/ folder exists at the repo root and filenames match exactly (case-sensitive).
