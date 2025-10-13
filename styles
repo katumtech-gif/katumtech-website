@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katumtech Engineers | Fast and Sharp Printers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Katumtech Engineers</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#brands">Brands</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Fast and Sharp Printers</h1>
+      <p>Professional printer sales and repairs in Nairobi CBD.</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Katumtech Engineers</h2>
+    <p>
+      Katumtech Engineers specializes in printer sales and repair services for
+      top brands including Konica Minolta, HP, Canon, Ricoh, and Kyocera.
+      We provide high-quality, genuine toners and spare parts — ensuring
+      reliability and performance.
+    </p>
+  </section>
+
+  <section id="brands" class="brands">
+    <h2>Our Trusted Brands</h2>
+    <div class="brand-logos">
+      <img src="images/konica.png" alt="Konica Minolta" />
+      <img src="images/hp.png" alt="HP" />
+      <img src="images/canon.png" alt="Canon" />
+      <img src="images/ricoh.png" alt="Ricoh" />
+      <img src="images/kyocera.png" alt="Kyocera" />
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Nairobi CBD</p>
+    <p>📞 0700 612345 (Also on WhatsApp)</p>
+    <p>📧 katumtech@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Katumtech Engineers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
