@@ -1,1 +1,9 @@
-placeholder
+<section id="home" class="hero" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Konica_Minolta_bizhub_printer.jpg');">
+  <div class="overlay">
+    <div class="hero-content">
+      <h2>Fast & Sharp Printer Solutions</h2>
+      <p>Sales • Repairs • Maintenance for HP, Canon, Konica, Kyocera & Ricoh Printers</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+</section>
