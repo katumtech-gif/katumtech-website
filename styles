@@ -1,60 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katumtech Engineers | Fast and Sharp Printers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Katumtech Engineers — Fast & Sharp Printer Solutions (Kenya)</title>
+  <meta name="description" content="Katumtech Engineers — Konica Bizhub, HP, Canon, Ricoh & Kyocera printer sales, repairs and genuine toners across Kenya." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Katumtech Engineers</div>
-    <nav>
+
+<!-- Header -->
+<header class="header">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">K</div>
+      <div>
+        <div class="title">Katumtech Engineers</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.9)">Your Trusted Printer Experts in Kenya</div>
+      </div>
+    </div>
+    <nav class="nav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#brands">Brands</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Fast and Sharp Printers</h1>
-      <p>Professional printer sales and repairs in Nairobi CBD.</p>
-      <a href="#contact" class="btn">Contact Us</a>
+<!-- HERO -->
+<section id="home" class="hero" style="background-image:url('https://images.unsplash.com/photo-1605902711622-cfb43c44367f?auto=format&fit=crop&w=1500&q=80');">
+  <div class="hero-inner">
+    <h1 class="h1">Fast and Sharp Printer Solutions</h1>
+    <p class="lead">Katumtech Engineers — reliable sales, repairs and original toners for Konica, HP, Canon, Ricoh &amp; Kyocera. Serving all of Kenya.</p>
+    <div>
+      <a class="btn btn-primary" href="https://wa.me/254700612345" target="_blank" rel="noreferrer">Request a Quote (WhatsApp)</a>
+      <a class="btn btn-ghost" href="tel:+254700612345">Call: 0700 612 345</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="about" class="about">
+<main class="container">
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
     <h2>About Katumtech Engineers</h2>
-    <p>
-      Katumtech Engineers specializes in printer sales and repair services for
-      top brands including Konica Minolta, HP, Canon, Ricoh, and Kyocera.
-      We provide high-quality, genuine toners and spare parts — ensuring
-      reliability and performance.
-    </p>
-  </section>
-
-  <section id="brands" class="brands">
-    <h2>Our Trusted Brands</h2>
-    <div class="brand-logos">
-      <img src="images/konica.png" alt="Konica Minolta" />
-      <img src="images/hp.png" alt="HP" />
-      <img src="images/canon.png" alt="Canon" />
-      <img src="images/ricoh.png" alt="Ricoh" />
-      <img src="images/kyocera.png" alt="Kyocera" />
+    <div class="grid" style="align-items:center">
+      <div class="card">
+        <h3>Who we are</h3>
+        <p>Based in Nairobi CBD, Katumtech Engineers supplies and services office printers across Kenya. We focus on Konica Bizhub, HP, Canon, Ricoh and Kyocera fleets.</p>
+      </div>
+      <div class="card">
+        <h3>Our promise</h3>
+        <p>Fast response time, expert technicians, genuine spare parts, and clear pricing. We keep your office printing running smoothly.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Nairobi CBD</p>
-    <p>📞 0700 612345 (Also on WhatsApp)</p>
-    <p>📧 katumtech@gmail.com</p>
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card"><h3>Printer Repairs</h3><p>Hardware & software fixes, firmware updates, paper-feed repair and print quality restoration.</p></div>
+      <div class="card"><h3>Preventive Maintenance</h3><p>Service contracts and scheduled maintenance to reduce downtime.</p></div>
+      <div class="card"><h3>Genuine Toners & Parts</h3><p>Original toners, drums and spares — no refills or imitation cartridges.</p></div>
+      <div class="card"><h3>Sales & Installation</h3><p>New and certified refurbished printers with professional setup and training.</p></div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Katumtech Engineers. All rights reserved.</p>
-  </footer>
+  <!-- BRANDS -->
+  <section id="brands" class="section">
+    <h2>Brands We Handle</h2>
+    <div class="brands">
+      <img src="https://1000logos.net/wp-content/uploads/2021/05/Konica-Minolta-logo.png" alt="Konica Minolta">
+      <img src="https://1000logos.net/wp-content/uploads/2016/10/HP-Logo.png" alt="HP">
+      <img src="https://1000logos.net/wp-content/uploads/2016/11/Canon-logo.png" alt="Canon">
+      <img src="https://1000logos.net/wp-content/uploads/2021/10/Ricoh-logo.png" alt="Ricoh">
+      <img src="https://1000logos.net/wp-content/uploads/2022/06/Kyocera-logo.png" alt="Kyocera">
+    </div>
+  </section>
+
+  <!-- GALLERY / SLIDESHOW -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="slideshow" aria-hidden="false">
+      <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=1600&q=80" alt="Konica Bizhub" class="active">
+      <img src="https://images.unsplash.com/photo-1581093588401-3f6a9f1ae567?auto=format&fit=crop&w=1600&q=80" alt="Printer tech">
+      <img src="https://images.unsplash.com/photo-1580747190308-9f8cf7b5e2e9?auto=format&fit=crop&w=1600&q=80" alt="Toner parts">
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <div class="grid">
+      <div class="testimonial card"><p>"Katumtech fixed our office Bizhub in a day. Professional and fast." — Jane, Nairobi</p></div>
+      <div class="testimonial card"><p>"Genuine toners and fair prices. Highly recommended." — Paul, Mombasa</p></div>
+      <div class="testimonial card"><p>"Excellent maintenance plan — reduced our downtime by 70%." — Grace, Eldoret</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <h2>FAQ</h2>
+    <div style="max-width:900px;margin:0 auto;text-align:left">
+      <div class="faq-item"><div class="faq-q">Q: Do you sell genuine toners?</div><div class="faq-a">A: Yes — original manufacturer toners only, no refills.</div></div>
+      <div class="faq-item"><div class="faq-q">Q: Do you service outside Nairobi?</div><div class="faq-a">A: Yes — we serve all counties across Kenya.</div></div>
+      <div class="faq-item"><div class="faq-q">Q: How do I request a quote?</div><div class="faq-a">A: Click the WhatsApp button above or go to the Contact section to message us.</div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <h3>Contact Info</h3>
+          <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254700612345">0700 612 345</a></p>
+          <p><strong>Email:</strong> <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></p>
+          <p><strong>Address:</strong> Nairobi CBD — Serving all of Kenya</p>
+          <p style="margin-top:8px"><a class="btn btn-primary" href="https://wa.me/254700612345" target="_blank" rel="noreferrer">Message on WhatsApp</a></p>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-card">
+          <h3>Send us a message</h3>
+          <form action="mailto:katumtech@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="text" name="phone" placeholder="Phone / WhatsApp" required>
+            <textarea name="message" rows="5" placeholder="Describe your issue" required></textarea>
+            <button type="submit" class="btn-submit">Send Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px">
+      <h3>Find us on the map</h3>
+      <iframe src="https://www.google.com/maps?q=Nairobi+CBD&output=embed" width="100%" height="300" style="border:0;border-radius:8px"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">© 2025 Katumtech Engineers | Nairobi CBD, Serving all of Kenya • <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a> • 0700 612 345</div>
+</footer>
+
+<!-- Back to top -->
+<div id="backTop">↑ Top</div>
+
+<script src="script.js"></script>
 </body>
 </html>
