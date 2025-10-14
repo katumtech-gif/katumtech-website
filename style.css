@@ -1,186 +1,148 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katumtech Engineers | Printer Sales & Repairs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8ff;
+      color: #222;
+    }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background-color: #005b99;
-  color: white;
-}
+    header {
+      background: #0a53be;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
 
-.navbar .logo {
-  font-size: 1.4em;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
 
-.navbar nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
 
-.navbar nav a:hover {
-  text-decoration: underline;
-}
+    .hero {
+      background: url('images/bizhub-printer.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 7rem 1rem;
+      position: relative;
+    }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat;
-  position: relative;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 53, 128, 0.5);
+    }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 91, 153, 0.4);
-}
+    .hero h2 {
+      position: relative;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: auto;
-}
+    .hero p {
+      position: relative;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
+    .hero a {
+      position: relative;
+      background: #ffffff;
+      color: #0a53be;
+      padding: 0.8rem 1.6rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
+    .hero a:hover {
+      background: #0a53be;
+      color: white;
+    }
 
-.btn {
-  display: inline-block;
-  background: white;
-  color: #005b99;
-  padding: 10px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
+    .brands {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
 
-.btn:hover {
-  background: #e0e0e0;
-}
+    .brands h3 {
+      color: #0a53be;
+      margin-bottom: 2rem;
+    }
 
-/* About Section */
-.about {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f8f9fa;
-}
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
 
-.about h2 {
-  color: #005b99;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
+    .logos img {
+      height: 70px;
+      filter: grayscale(0);
+      transition: transform 0.3s;
+    }
 
-.about p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.7;
-  color: #333;
-}
+    .logos img:hover {
+      transform: scale(1.1);
+    }
 
-/* Brands Section */
-.brands {
-  padding: 60px 20px;
-  text-align: center;
-}
+    footer {
+      background: #0a53be;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
 
-.brands h2 {
-  color: #005b99;
-  margin-bottom: 30px;
-}
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
-.brand-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
+  <header>
+    <h1>Katumtech Engineers</h1>
+    <p>Printer Sales & Repairs – Nairobi CBD</p>
+  </header>
 
-.brand-logos img {
-  width: 160px;
-  height: auto;
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+  <section class="hero">
+    <h2>Fast and Sharp Printing Solutions</h2>
+    <p>We specialize in Konica, HP, Canon, Ricoh, and Kyocera printers.</p>
+    <a href="mailto:katumtech@gmail.com">Contact Us</a>
+  </section>
 
-.brand-logos img:hover {
-  transform: scale(1.05);
-}
+  <section class="brands">
+    <h3>We Deal In</h3>
+    <div class="logos">
+      <img src="images/konica.png" alt="Konica Logo">
+      <img src="images/hp.png" alt="HP Logo">
+      <img src="images/canon.png" alt="Canon Logo">
+      <img src="images/ricoh.png" alt="Ricoh Logo">
+      <img src="images/kyocera.png" alt="Kyocera Logo">
+    </div>
+  </section>
 
-/* Contact Section */
-.contact {
-  background-color: #f1f1f1;
-  text-align: center;
-  padding: 60px 20px;
-}
+  <footer>
+    <p>&copy; 2025 Katumtech Engineers | All Rights Reserved</p>
+    <p>Email: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a> | Phone: 0700 612 345</p>
+  </footer>
 
-.contact h2 {
-  color: #005b99;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-/* Footer */
-footer {
-  background-color: #005b99;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 0.9rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-  .navbar nav a {
-    margin: 10px 0;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .brand-logos img {
-    width: 120px;
-  }
-}
+</body>
+</html>
