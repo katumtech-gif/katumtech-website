@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,22 +9,22 @@
   <style>
     :root{
       --bg:#0b0f12; --card:#0f1720; --muted:#9aa6b2; --accent:#00d1b2; --glass: rgba(255,255,255,0.04);
-      --maxw:1100px;
+      --maxw:1200px;
       font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:linear-gradient(180deg,#061018 0%,var(--bg) 100%);color:#e6eef2}
     a{color:var(--accent);text-decoration:none}
-    .site{max-width:var(--maxw);margin:28px auto;padding:28px}
+    .site{max-width:var(--maxw);margin:20px auto;padding:22px}
     header{display:flex;align-items:center;gap:18px}
     .logo{display:flex;align-items:center;gap:12px}
-    .logo svg{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#071621,#0b2a24);padding:10px}
-    h1{margin:0;font-size:22px;letter-spacing:0.4px}
+    .logo svg{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#071621,#0b2a24);padding:8px}
+    h1{margin:0;font-size:20px}
     .slogan{color:var(--muted);font-size:13px}
     nav{margin-left:auto}
     nav a{margin-left:18px;font-size:14px;color:var(--muted)}
 
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:28px;align-items:center}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:20px;align-items:center}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:22px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
     .hero-left h2{margin:0 0 12px 0;font-size:28px}
     .cta-row{display:flex;gap:12px;margin-top:16px}
@@ -43,45 +44,73 @@
 
     footer{margin-top:32px;color:var(--muted);font-size:13px;padding:18px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));display:flex;justify-content:space-between;align-items:center}
 
+    .nav-anchors{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+    /* gallery grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .grid img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+
+    /* careers */
+    .job{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+
+    /* faq */
+    .faq{margin-top:8px}
+    .faq details{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;margin-bottom:8px}
+
     /* responsive */
-    @media (max-width:900px){
+    @media (max-width:1000px){
       .hero{grid-template-columns:1fr}
       .two-col{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
       nav{display:none}
+    }
+    @media (max-width:600px){
+      .grid{grid-template-columns:1fr}
+      .logo svg{width:52px;height:52px}
     }
   </style>
 </head>
 <body>
   <div class="site">
     <header>
-      <div class="logo">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Katumtech logo">
-          <rect x="6" y="12" width="52" height="36" rx="6" fill="#071a16" stroke="#0aa98a" stroke-width="1.6" />
-          <rect x="18" y="22" width="28" height="12" rx="2" fill="#062021" stroke="#0aa98a" stroke-width="1" />
-          <rect x="22" y="28" width="6" height="4" rx="1" fill="#0aa98a"/>
+      <div class="logo" aria-hidden="false">
+        <!-- Custom flat logo: printer + circuit motif -->
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Katumtech Engineers logo">
+          <rect x="6" y="20" width="108" height="72" rx="14" fill="#071a16" stroke="#06b59a" stroke-width="2" />
+          <rect x="18" y="34" width="84" height="42" rx="6" fill="#062021" />
+          <rect x="26" y="44" width="20" height="10" rx="3" fill="#06b59a" />
+          <rect x="58" y="44" width="36" height="10" rx="3" fill="#0aa98a" />
+          <!-- circuit dots -->
+          <circle cx="42" cy="68" r="3" fill="#06b59a" />
+          <circle cx="78" cy="68" r="3" fill="#06b59a" />
         </svg>
         <div>
           <h1>Katumtech Engineers</h1>
-          <div class="slogan">Printer sales • Genuine toners • Repairs — Nairobi CBD</div>
+          <div class="slogan">Smart Printer Solutions — Nairobi CBD</div>
         </div>
       </div>
       <nav>
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#careers">Careers</a>
+        <a href="#faqs">FAQs</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="card hero-left">
-        <h2>Fast, reliable printer repairs & genuine supplies</h2>
-        <p class="slogan">We sell new and genuine toners and spare parts — no refills. Fast turnaround for businesses across Nairobi.</p>
+        <h2>Fast, reliable printer repairs & genuine supplies across Nairobi</h2>
+        <p class="slogan">We sell new & genuine toners and spare parts — no refills. Certified technicians for Ricoh, Konica Minolta, Canon & HP.</p>
 
         <div class="features">
           <div class="f">✅ Genuine toners & parts</div>
           <div class="f">🔧 On-site & in-shop repairs</div>
-          <div class="f">📄 Service contracts for offices</div>
+          <div class="f">📄 Service contracts for businesses</div>
         </div>
 
         <div class="cta-row">
@@ -90,7 +119,8 @@
         </div>
 
         <div style="margin-top:18px" class="gallery">
-          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a0b3c3a9c9b8f6a" alt="office printer" />
+          <!-- hero image: modern office printer -->
+          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a0b3c3a9c9b8f6a" alt="office printer" />
         </div>
       </div>
 
@@ -110,6 +140,22 @@
       </aside>
     </section>
 
+    <!-- ABOUT -->
+    <section class="card" id="about" style="margin-top:18px">
+      <h3>About Katumtech Engineers</h3>
+      <p class="slogan">Katumtech Engineers is a Nairobi-based company specialising in printer sales, genuine toners, and professional repairs. We serve offices, schools, and businesses across Nairobi with fast response times and certified technicians.</p>
+
+      <div style="display:flex;gap:12px;margin-top:12px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <p style="color:var(--muted)">Founded with a vision to remove downtime and deliver reliable print services, we stock genuine parts and focus on long-term relationships through service contracts and quick on-site support.</p>
+        </div>
+        <div style="width:320px">
+          <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b2d9f3b4d3f7b7a" alt="printer closeup" style="width:100%;height:160px;object-fit:cover;border-radius:8px" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
     <section class="two-col" id="services">
       <div class="card">
         <h3>Our Services</h3>
@@ -117,8 +163,8 @@
           <div class="service">
             <div class="dot">🖨️</div>
             <div>
-              <strong>Printer Repairs</strong>
-              <div class="slogan">Diagnosis, spare parts replacement, fuser/roller repairs, hardware & firmware fixes.</div>
+              <strong>Printer Repairs & Diagnostics</strong>
+              <div class="slogan">From paper jams to fuser replacements and firmware updates — we fix it.</div>
             </div>
           </div>
 
@@ -126,7 +172,7 @@
             <div class="dot">🧾</div>
             <div>
               <strong>Maintenance Contracts</strong>
-              <div class="slogan">Monthly or quarterly plans for offices that need consistent uptime.</div>
+              <div class="slogan">Preventive maintenance plans to ensure office uptime.</div>
             </div>
           </div>
 
@@ -134,7 +180,7 @@
             <div class="dot">🛒</div>
             <div>
               <strong>Genuine Toners & Spares</strong>
-              <div class="slogan">We sell new and genuine toners by Ricoh, Canon, HP & more — no refill services.</div>
+              <div class="slogan">We stock genuine Ricoh, Konica Minolta, Canon & HP toners — no refills.</div>
             </div>
           </div>
 
@@ -142,7 +188,7 @@
             <div class="dot">🚚</div>
             <div>
               <strong>Delivery & On-site Repairs</strong>
-              <div class="slogan">Fast same-day pickup within Nairobi CBD where possible.</div>
+              <div class="slogan">Fast same-day pickup or on-site fixes within Nairobi CBD and nearby areas.</div>
             </div>
           </div>
         </div>
@@ -152,27 +198,71 @@
         <h3>Featured products</h3>
         <p class="slogan">Sample models we sell and support — contact for stock & pricing.</p>
         <div style="display:grid;gap:10px;margin-top:8px">
+          <div style="background:var(--glass);padding:10px;border-radius:8px">Konica Minolta bizhub C360i — Colour MFP (example)</div>
           <div style="background:var(--glass);padding:10px;border-radius:8px">Ricoh MP 301SPF — Multifunction</div>
           <div style="background:var(--glass);padding:10px;border-radius:8px">HP LaserJet Pro M404dn — Small office</div>
-          <div style="background:var(--glass);padding:10px;border-radius:8px">Canon imageCLASS — Heavy duty</div>
         </div>
 
         <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:14px 0" />
-        <h4 style="margin:6px 0">Gallery</h4>
-        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b2d9f3b4d3f7b7a" alt="printer closeup" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-top:8px" />
+        <h4 style="margin:6px 0">Gallery preview</h4>
+        <img src="https://images.unsplash.com/photo-1581093588401-5f24b44a3a49?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef1234567890" alt="konica minolta sample" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-top:8px" />
       </div>
     </section>
 
+    <!-- PRODUCTS & TONER GUIDE -->
     <section class="card" id="products" style="margin-top:18px">
       <h3>Products & Toner Guide</h3>
-      <p class="slogan">We sell genuine toners and parts. No toner refills — ask for compatible Ricoh/HP/Canon part numbers when enquiring.</p>
+      <p class="slogan">We sell genuine toners and parts. No toner refills — ask for compatible Konica Minolta, Ricoh, HP, and Canon part numbers when enquiring.</p>
       <ul style="color:var(--muted);margin-top:8px">
-        <li><strong>Toner cartridges</strong> — new, genuine (Ricoh, HP, Canon)</li>
+        <li><strong>Toner cartridges</strong> — new, genuine (Konica Minolta, Ricoh, HP, Canon)</li>
         <li><strong>Fusers & Rollers</strong> — replacement parts for most office machines</li>
         <li><strong>Service kits</strong> — preventive maintenance kits</li>
       </ul>
     </section>
 
+    <!-- GALLERY -->
+    <section class="card" id="gallery" style="margin-top:18px">
+      <h3>Gallery — Konica Minolta & Technicians</h3>
+      <p class="slogan">Realistic photos to show trust. Replace these with your own photos for best results.</p>
+      <div class="grid" style="margin-top:12px">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a0b3c3a9c9b8f6a" alt="office printer 1" />
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b2d9f3b4d3f7b7a" alt="printer closeup" />
+        <img src="https://images.unsplash.com/photo-1581094288332-39b8a3b8ccf2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=123456abcdef" alt="konica minolta" />
+        <!-- technician images -->
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7890abcd1234" alt="technician repairing printer" />
+        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=555aaa111bbb" alt="technician at work" />
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=999888777666" alt="printer parts" />
+      </div>
+      <p class="slogan" style="margin-top:10px">Caption: top-right images show Konica Minolta-style MFP and our technicians (sample stock images).</p>
+    </section>
+
+    <!-- CAREERS -->
+    <section class="card" id="careers" style="margin-top:18px">
+      <h3>Careers</h3>
+      <p class="slogan">Join the Katumtech team — we hire technicians and sales/operations staff. Email your CV to <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a>.</p>
+      <div style="display:grid;gap:10px;margin-top:12px">
+        <div class="job">
+          <strong>Printer Technician (Junior)</strong>
+          <div class="slogan">Requirements: basic electrical knowledge, willingness to learn, keen on repairs.</div>
+        </div>
+        <div class="job">
+          <strong>Sales & Operations</strong>
+          <div class="slogan">Requirements: customer service experience, basic bookkeeping skills.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="card" id="faqs" style="margin-top:18px">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq">
+        <details><summary>Do you do toner refills?</summary><div class="slogan">No — we sell new and genuine toners and spare parts only.</div></details>
+        <details><summary>Do you offer on-site repairs?</summary><div class="slogan">Yes — within Nairobi CBD and nearby areas. Call/WhatsApp to book.</div></details>
+        <details><summary>Do you provide service contracts?</summary><div class="slogan">Yes — monthly and quarterly plans are available for businesses.</div></details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="card" id="contact" style="margin-top:18px">
       <h3>Contact & Visit</h3>
       <p class="slogan">Email: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a> • Phone/WhatsApp: <a href="tel:+254700612345">0700612345</a></p>
@@ -184,7 +274,7 @@
         <button type="button" class="btn" style="grid-column:2/3;justify-self:end">Send Message</button>
       </form>
 
-      <p class="slogan" style="margin-top:12px">Tip: Replace these sample images with your own shop photos for trust & conversions.</p>
+      <p class="slogan" style="margin-top:12px">Tip: Replace these sample images with your own shop photos for trust & conversions. Want me to add a working send-to-email contact form? I can add a simple PHP handler or Netlify form attributes.</p>
     </section>
 
     <footer>
