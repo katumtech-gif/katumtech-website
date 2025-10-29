@@ -1,108 +1,118 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Katumtech Engineers — Printer Sales & Repairs</title>
-<style>
-  :root{
-    --bg:#0b0f12; --card:#0f1720; --muted:#9aa6b2; --accent:#00d1b2;
-    font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:#e6eef2;line-height:1.5}
-  a{color:var(--accent);text-decoration:none}
-  .site{width:100%;}
-  header{display:flex;align-items:center;gap:20px;padding:20px 40px}
-  .logo img{width:120px;height:120px;border-radius:10px}
-  .logo h1{font-size:28px;margin-top:10px}
-  .slogan{color:var(--muted);font-size:14px}
-  nav{margin-left:auto}
-  nav a{margin-left:20px;font-size:15px;color:var(--muted)}
-
-  .hero{position:relative;height:90vh;background:url('https://images.unsplash.com/photo-1601597118817-37a2b320e7da?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;display:flex;align-items:center;justify-content:center;}
-  .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55)}
-  .hero-content{position:relative;text-align:center;color:#e6eef2;padding:20px;max-width:900px;}
-  .hero-content h2{font-size:36px;margin-bottom:16px}
-  .hero-content p{font-size:18px;margin-bottom:20px}
-  .btn{background:var(--accent);color:#05211b;padding:14px 22px;border-radius:10px;font-weight:600;margin:5px;display:inline-block}
-
-  section{padding:50px 40px;max-width:1400px;margin:0 auto}
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin-bottom:40px}
-  .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}
-  .gallery img{width:100%;border-radius:10px;height:300px;object-fit:cover}
-  form input, form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef2;margin-bottom:10px}
-  form button{width:auto;cursor:pointer}
-
-  footer{display:none}
-
-  @media(max-width:900px){
-    .two-col{grid-template-columns:1fr}
-    nav{display:none}
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Katumtech Engineers — Home</title>
+  <meta name="description" content="Katumtech Engineers — Printer sales, genuine toners, spare parts and repairs in Nairobi." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="site">
-  <header>
-    <div class="logo">
-      <img src="https://images.unsplash.com/photo-1604079620643-882aab82c7f3?q=80&w=400&auto=format&fit=crop" alt="Katumtech logo">
-      <h1>Katumtech Engineers</h1>
-      <div class="slogan">Smart Printer Solutions – Nairobi CBD</div>
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h2>Fast, Reliable Printer Repairs & Genuine Supplies</h2>
-      <p>We sell new and genuine toners and spare parts — no refills. Certified technicians servicing Nairobi offices.</p>
-      <a class="btn" href="#contact">Request Service</a>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="two-col">
-      <div class="card">
-        <h3>Printer Repairs & Diagnostics</h3>
-        <p>From paper jams to fuser replacements — fast and reliable service.</p>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">KE</div>
+        <div class="brand-text">
+          <div class="company">Katumtech Engineers</div>
+          <div class="slogan">Keeping Nairobi printing — one page at a time</div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Genuine Toners & Spare Parts</h3>
-        <p>Stocking genuine Ricoh, Konica Minolta, HP, and Canon products.</p>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero card">
+        <div class="hero-left">
+          <h1>Reliable printers, genuine toners & fast repairs</h1>
+          <p class="lead">Trusted printer sales, genuine parts and professional repairs across Nairobi.</p>
+          <div class="cta">
+            <a class="btn" href="services.html">Our Services</a>
+            <a class="btn ghost" href="contact.html">Contact Us</a>
+          </div>
+
+          <div class="quick card-inner">
+            <h3>Quick facts</h3>
+            <p class="muted">Location: Nairobi CBD • Email: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a> • WhatsApp / Phone: <a href="tel:+254700612345">0700612345</a></p>
+            <div class="facts-grid">
+              <div>
+                <strong>What we sell</strong>
+                <p class="muted small">New printers, genuine manufacturer toners, and original spare parts. We do <strong>not</strong> refill toners — we sell genuine replacements.</p>
+              </div>
+              <div>
+                <strong>Why clients choose us</strong>
+                <ul class="muted small">
+                  <li>Genuine parts and transparent pricing</li>
+                  <li>Fast turnaround for repairs</li>
+                  <li>Clear warranty & testing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right card-inner">
+          <h3>Request a Quote</h3>
+          <p class="muted small">Tell us your printer model and issue — we'll respond quickly.</p>
+          <form id="quoteForm" onsubmit="handleQuote(event)">
+            <input name="name" placeholder="Your name" required />
+            <input name="phone" placeholder="Phone / WhatsApp" required />
+            <input name="model" placeholder="Printer model (e.g., HP LaserJet Pro M404)" />
+            <textarea name="message" rows="3" placeholder="Describe the issue or what you need"></textarea>
+            <button class="btn" type="submit">Send Quote Request</button>
+          </form>
+          <p class="muted small" style="margin-top:10px">Or call/WhatsApp: <strong>0700612345</strong></p>
+        </aside>
+      </section>
+
+      <section class="cards-list">
+        <div class="card">
+          <h3>Services at a glance</h3>
+          <div class="services-grid">
+            <div class="service-block">
+              <strong>Printer Sales</strong>
+              <p class="muted small">New and boxed printers — consult with us for the right model for your workload.</p>
+            </div>
+            <div class="service-block">
+              <strong>Genuine Toners & Parts</strong>
+              <p class="muted small">We sell manufacturer toners and original spare parts. No refills.</p>
+            </div>
+            <div class="service-block">
+              <strong>Repairs & Diagnostics</strong>
+              <p class="muted small">Fault isolation, parts replacement, firmware updates and testing.</p>
+            </div>
+            <div class="service-block">
+              <strong>Preventive Maintenance</strong>
+              <p class="muted small">Scheduled maintenance to extend printer life and reduce downtime.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Brands we support</h3>
+          <div class="brand-pills">
+            <span>HP</span><span>Canon</span><span>Epson</span><span>Nashuatec</span><span>Brother</span><span>Xerox</span>
+          </div>
+          <p class="muted small">If you don't see a brand listed, contact us — we likely support it or we can source parts.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© Katumtech Engineers — Nairobi • Genuine toners & original parts</div>
+        <div class="muted small">Built for easy photo additions later • Contact: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></div>
       </div>
-    </div>
-  </section>
+    </footer>
+  </div>
 
-  <section id="gallery">
-    <h2>Gallery — Printers & Spares</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1581092795360-8a8b82be20c7?q=80&w=800&auto=format&fit=crop" alt="Printer in use">
-      <img src="https://images.unsplash.com/photo-1610484827011-efb8f09a4129?q=80&w=800&auto=format&fit=crop" alt="Spare parts close-up">
-      <img src="https://images.unsplash.com/photo-1602084550465-79463b9c98f0?q=80&w=800&auto=format&fit=crop" alt="Technician servicing printer">
-      <img src="https://images.unsplash.com/photo-1629136800517-86ab42a7f9b8?q=80&w=800&auto=format&fit=crop" alt="Konica Minolta printer">
-    </div>
-  </section>
-
-  <section id="contact" style="background:url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;position:relative;padding:60px 40px;border-radius:12px;margin-top:40px">
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);border-radius:12px"></div>
-    <div style="position:relative;max-width:700px;margin:0 auto;color:#e6eef2;">
-      <h2>Contact & Visit</h2>
-      <form>
-        <input placeholder="Your Name">
-        <input placeholder="Email or Phone">
-        <textarea placeholder="Message (service needed / model / preferred time)"></textarea>
-        <button type="button" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-</div>
+  <script src="script.js"></script>
 </body>
 </html>
+
