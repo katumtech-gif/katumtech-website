@@ -1,67 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Katumtech Engineers</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: #333;
-    }
-    header, footer {
-      background-color: #0056b3;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    nav {
-      background-color: #007bff;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; }
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Katumtech Engineers</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>About Katumtech Engineers</h1>
-  </header>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">KE</div>
+        <div class="brand-text">
+          <div class="company">Katumtech Engineers</div>
+          <div class="slogan">Keeping Nairobi printing — one page at a time</div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <main class="content">
+      <section class="card">
+        <h1>Services</h1>
+        <p class="muted">Comprehensive printing services tailored to your business.</p>
 
-  <section class="section">
-    <h2>Who We Are</h2>
-    <p>Katumtech Engineers is a trusted technology solutions company based in Nairobi CBD, serving clients across Kenya. We specialize in printer sales, repairs, and supplying genuine toners and spare parts.</p>
+        <div class="services-grid-lg">
+          <div class="service-block-lg">
+            <h3>Printer Sales</h3>
+            <p class="muted">We supply new printers suited to workload — from small offices to larger corporates. We advise on duty cycle, features, and total cost of ownership.</p>
+          </div>
 
-    <h2>Our Mission</h2>
-    <p>To provide reliable, high-quality printing solutions that help businesses maintain efficiency and productivity.</p>
+          <div class="service-block-lg">
+            <h3>Genuine Toners & Parts</h3>
+            <p class="muted">We stock genuine manufacturer toners and common spare parts. We do not offer refills — only authentic replacements for reliability.</p>
+          </div>
 
-    <h2>Our Vision</h2>
-    <p>To become Kenya’s most preferred and trusted printer technology partner.</p>
-  </section>
+          <div class="service-block-lg">
+            <h3>Repairs & Diagnostics</h3>
+            <p class="muted">On-site and in-shop repairs: fault isolation, parts replacement, firmware updates and thorough testing.</p>
+          </div>
 
-  <footer>
-    © 2025 Katumtech Engineers | Nairobi, Kenya
-  </footer>
+          <div class="service-block-lg">
+            <h3>Preventive Maintenance</h3>
+            <p class="muted">Scheduled maintenance plans to keep your printers reliable and reduce unplanned downtime.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:16px">Add photos later</h3>
+        <p class="muted">Replace any <code>&lt;div class="img-placeholder"&gt;</code> with an <code>&lt;img src="assets/your-photo.jpg"&gt;</code> tag or set the element's <code>data-img</code> attribute to the image path.</p>
+
+        <div style="margin-top:18px">
+          <a class="btn" href="index.html">Back to Home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© Katumtech Engineers — Nairobi</div>
+        <div class="muted small">Contact: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
