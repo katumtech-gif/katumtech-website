@@ -1,172 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Katumtech Engineers - Quality Prints, Genuine Spares, Professional Repairs in Nairobi CBD. We sell and repair Konica Minolta, HP, Epson, and Canon printers.">
-  <meta name="keywords" content="printer repair Nairobi, Katumtech Engineers, Konica Minolta, HP printer repair, Epson service, Canon service, printer spare parts Kenya">
-  <meta name="author" content="Katumtech Engineers">
-  <title>Katumtech Engineers | Printer Sales & Repairs</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Katumtech Engineers — Printer sales, genuine spares and professional repairs in Nairobi CBD. Konica Minolta, HP, Epson, Canon service and parts.">
+  <title>Katumtech Engineers — Printer Sales & Repairs</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      background: linear-gradient(to bottom right, #0a0a0a, #1b1b1b);
-      background-image: url('https://images.unsplash.com/photo-1527443224154-c4e0e1fba10d?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-attachment: fixed;
+    :root{
+      --accent:#00bcd4;
+      --muted:#cfd8dc;
+      --card-bg: rgba(0,0,0,0.6);
+      --glass: rgba(255,255,255,0.03);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color:#fff;
+      line-height:1.45;
+      background: linear-gradient(135deg, #070707 0%, #121212 60%), url('https://images.unsplash.com/photo-1527443224154-c4e0e1fba10d?auto=format&fit=crop&w=1950&q=80') center/cover fixed no-repeat;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
       scroll-behavior: smooth;
     }
-
-    header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+    .wrap{max-width:var(--max-width); margin:30px auto; padding:20px;}
+    header{
+      position:sticky; top:0; z-index:999;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+      padding:18px; border-radius:10px;
+      display:flex; gap:20px; align-items:center; justify-content:space-between;
     }
-
-    header h1 {
-      font-size: 2rem;
-      margin: 0;
-      color: #00bcd4;
+    .brand{display:flex; gap:14px; align-items:center}
+    .logo{
+      width:58px; height:58px; border-radius:10px; background:var(--glass);
+      display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--accent);
+      font-size:20px; box-shadow:0 4px 14px rgba(0,0,0,0.6);
     }
-
-    header p {
-      font-size: 1rem;
-      color: #ccc;
+    h1{margin:0; font-size:1.25rem; color:var(--accent)}
+    nav a{color:var(--muted); margin-left:12px; text-decoration:none; font-weight:600}
+    .hero{
+      margin-top:22px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.65));
+      border-radius:12px; padding:28px; display:flex; gap:24px; align-items:center;
     }
-
-    nav {
-      margin-top: 10px;
+    .hero .left{flex:1}
+    .hero h2{color:var(--accent); margin:0 0 8px 0; font-size:1.6rem}
+    .hero p{color:var(--muted); margin:0 0 12px 0}
+    .cta{display:flex; gap:12px; margin-top:10px}
+    .btn{
+      display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700;
     }
-
-    nav a {
-      color: #00bcd4;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
+    .btn-primary{background:var(--accent); color:#04181a}
+    .btn-outline{border:2px solid var(--accent); color:var(--accent); background:transparent}
+    .hero .right{width:360px; min-width:260px}
+    .card{background:var(--card-bg); padding:16px; border-radius:10px}
+    .grid{display:grid; gap:18px}
+    .two-col{grid-template-columns:1fr 1fr}
+    section{margin:26px 0; padding:22px; border-radius:12px; background:rgba(0,0,0,0.55)}
+    h2.section-title{color:var(--accent); margin-top:0}
+    .services-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+    .service{background:rgba(255,255,255,0.02); padding:14px; border-radius:10px; min-height:130px}
+    .service h3{margin:6px 0 8px 0; color:#fff; font-size:1.05rem}
+    .price-table{width:100%; border-collapse:collapse; margin-top:10px}
+    .price-table th, .price-table td{padding:10px; text-align:left; border-bottom:1px solid rgba(255,255,255,0.06)}
+    .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+    .gallery img{width:100%; height:220px; object-fit:cover; border-radius:10px; display:block; box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .testimonial{background:rgba(255,255,255,0.02); padding:12px; border-radius:8px}
+    footer{margin-top:18px; text-align:center; color:var(--muted); font-size:0.9rem}
+    .faq dt{font-weight:700; margin-top:12px}
+    .contact-grid{display:grid; grid-template-columns:1fr 420px; gap:18px}
+    label{display:block; margin:8px 0 6px; font-weight:600}
+    input, textarea, select{width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:rgba(0,0,0,0.35); color:#fff}
+    .small{font-size:0.9rem; color:var(--muted)}
+    /* small screen tweaks */
+    @media(max-width:880px){
+      .contact-grid{grid-template-columns:1fr}
+      header{flex-direction:column; align-items:flex-start}
+      .hero{flex-direction:column}
+      .hero .right{width:100%}
     }
-
-    section {
-      padding: 60px 20px;
-      background: rgba(0, 0, 0, 0.65);
-      margin: 30px auto;
-      width: 90%;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    /* whatsapp fixed button */
+    .whatsapp{
+      position:fixed; right:18px; bottom:18px; z-index:9999;
+      background:#25D366; color:#04181a; padding:14px 16px; border-radius:999px; box-shadow:0 8px 30px rgba(2, 117, 53, 0.25);
+      text-decoration:none; font-weight:800;
     }
-
-    h2 {
-      text-align: center;
-      color: #00bcd4;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      background: rgba(0, 0, 0, 0.85);
-      text-align: center;
-      padding: 30px;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    .contact-info {
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    .contact-info p {
-      margin: 5px 0;
-    }
+    .map-embed{width:100%; height:300px; border-radius:10px; border:0}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Katumtech Engineers</h1>
-    <p>Quality Prints, Genuine Spares, Professional Repairs</p>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">K</div>
+        <div>
+          <h1>Katumtech Engineers</h1>
+          <div class="small">Quality Prints · Genuine Spares · Professional Repairs</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section id="home">
-    <h2>Welcome to Katumtech Engineers</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      We are a Nairobi CBD-based company specializing in printer sales, repairs, and genuine spare parts. 
-      Our expert technicians handle brands like Konica Minolta, HP, Epson, and Canon with precision and professionalism.
-    </p>
-  </section>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="left">
+        <h2>Trusted printer specialists in Nairobi CBD</h2>
+        <p>We service Konica Minolta, HP, Epson and Canon. Genuine spares only — no toner refills. Fast workshops repairs, on-site support and installations for businesses across Nairobi.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="tel:+254700612345">Call / WhatsApp: 0700612345</a>
+          <a class="btn btn-outline" href="#contact">Request Quote</a>
+        </div>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1615764598071-ea4d6a4e6604?auto=format&fit=crop&w=800&q=80" alt="Konica Minolta Printer">
-      <img src="https://images.unsplash.com/photo-1620916566398-cb6b601b3c58?auto=format&fit=crop&w=800&q=80" alt="HP Printer Maintenance">
-      <img src="https://images.unsplash.com/photo-1607083206968-1365f3b4c871?auto=format&fit=crop&w=800&q=80" alt="Printer Technician at Work">
+        <section style="margin-top:18px">
+          <h3 style="margin:0 0 8px 0; color:var(--accent)">Why customers choose us</h3>
+          <ul class="small" style="margin:8px 0 0 18px">
+            <li>Experienced technicians for Konica Minolta C224 and heavy-duty office printers</li>
+            <li>Only genuine parts and manufacturer-standard repairs</li>
+            <li>Transparent pricing, on-site or workshop repairs</li>
+            <li>Fast response for corporate clients and offices in Nairobi CBD</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="right card">
+        <strong>Working hours</strong>
+        <div class="small" style="margin-top:6px">Mon–Sat: 8:00 — 18:00</div>
+        <hr style="border-color:rgba(255,255,255,0.04); margin:12px 0">
+        <strong>Location</strong>
+        <div class="small">Nairobi CBD — Shop / Workshop</div>
+        <hr style="border-color:rgba(255,255,255,0.04); margin:12px 0">
+        <strong>Contact</strong>
+        <div class="small">Phone/WhatsApp: <a href="tel:+254700612345" style="color:var(--accent); text-decoration:none">0700612345</a></div>
+        <div class="small">Email: <a href="mailto:katumtech@gmail.com" style="color:var(--accent); text-decoration:none">katumtech@gmail.com</a></div>
+      </div>
     </div>
-    <p style="text-align:center; max-width:700px; margin:30px auto;">
-      We offer professional printer repairs, genuine spare part sales, and new printer installations. 
-      No toner refills — only authentic parts to ensure durability and top performance.
-    </p>
-  </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1607083206968-1365f3b4c871?auto=format&fit=crop&w=800&q=80" alt="Printer Technician Repairing">
-      <img src="https://images.unsplash.com/photo-1615764598071-ea4d6a4e6604?auto=format&fit=crop&w=800&q=80" alt="Konica Minolta C224">
-      <img src="https://images.unsplash.com/photo-1620916566398-cb6b601b3c58?auto=format&fit=crop&w=800&q=80" alt="HP Printer Repairs">
-      <img src="https://images.unsplash.com/photo-1621361365424-14d797a7c4b9?auto=format&fit=crop&w=800&q=80" alt="Printer Spare Parts">
-      <img src="https://images.unsplash.com/photo-1612817159949-1922e7f9e1cc?auto=format&fit=crop&w=800&q=80" alt="Technician Calibrating Printer">
-      <img src="https://images.unsplash.com/photo-1598257006408-02ef9d8d3a9f?auto=format&fit=crop&w=800&q=80" alt="Workshop Setup">
-    </div>
-  </section>
+    <!-- Services -->
+    <section id="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-list">
+        <div class="service">
+          <h3>Printer Repairs — Konica Minolta & Heavy Duty</h3>
+          <p class="small">Diagnosis, parts replacement (fuser, rollers, controllers), firmware updates, and full servicing for Konica Minolta models including C224 and other colour MFPs.</p>
+        </div>
+        <div class="service">
+          <h3>HP & Epson Service</h3>
+          <p class="small">Repairs, spare parts, and maintenance for HP LaserJet and Epson business-class printers. Rollers, belts, sensors, and more.</p>
+        </div>
+        <div class="service">
+          <h3>Genuine Spare Parts Sales</h3>
+          <p class="small">We stock genuine manufacturer parts and new cartridges (original only). No refills — we sell only final-quality parts for durability.</p>
+        </div>
+        <div class="service">
+          <h3>On-site Installation & Support</h3>
+          <p class="small">Office setup, networked printers, Wi-Fi printing, and scheduled maintenance plans for businesses in Nairobi CBD.</p>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254700612345">0700612345</a></p>
-      <p><strong>Email:</strong> <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></p>
-      <p><strong>Location:</strong> Nairobi CBD, Kenya</p>
-      <p><strong>Website:</strong> <a href="https://katumtechengineers.com" target="_blank">katumtechengineers.com</a></p>
-    </div>
-  </section>
+    <!-- Pricing -->
+    <section id="pricing">
+      <h2 class="section-title">Typical Pricing (guide)</h2>
+      <table class="price-table">
+        <thead>
+          <tr><th>Service</th><th>Typical cost (KES)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Basic diagnostic (workshop)</td><td>1,500 — 3,000</td></tr>
+          <tr><td>Fuser replacement (Konica / HP)</td><td>6,000 — 18,000</td></tr>
+          <tr><td>Roller set replacement</td><td>2,500 — 7,000</td></tr>
+          <tr><td>On-site visit (within CBD)</td><td>1,000 — 3,000</td></tr>
+          <tr><td>Network setup / printer installation</td><td>2,500 — 6,000</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin-top:10px">Prices depend on model and parts needed. Get a free quote — send photos or short video via WhatsApp.</p>
+    </section>
 
-  <footer>
-    <p>© 2025 Katumtech Engineers | All Rights Reserved</p>
-  </footer>
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2 class="section-title">Gallery — Real printers & technicians</h2>
+      <div class="gallery">
+        <!-- Local-first image + remote fallback: save your real file inside images/ with these names to show your photos -->
+        <img loading="lazy" alt="Konica Minolta service" src="images/konica-minolta-c224.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1615764598071-ea4d6a4e6604?auto=format&fit=crop&w=1200&q=80'">
+        <img loading="lazy" alt="HP printer and parts" src="images/hp-printer-parts.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620916566398-cb6b601b3c58?auto=format&fit=crop&w=1200&q=80'">
+        <img loading="lazy" alt="Technician repairing printer" src="images/technician-working.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1607083206968-1365f3b4c871?auto=format&fit=crop&w=1200&q=80'">
+        <img loading="lazy" alt="Printer spare parts" src="images/printer-spare-parts.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1621361365424-14d797a7c4b9?auto=format&fit=crop&w=1200&q=80'">
+        <img loading="lazy" alt="Workshop setup" src="images/workshop-view.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1598257006408-02ef9d8d3a9f?auto=format&fit=crop&w=1200&q=80'">
+        <img loading="lazy" alt="Technician calibrating printer" src="images/technician-calibrating.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1612817159949-1922e7f9e1cc?auto=format&fit=crop&w=1200&q=80'">
+      </div>
+      <p class="small" style="margin-top:12px">Tip: Put your real photos into the <code>/images</code> folder with the filenames above to replace remote images instantly.</p>
+    </section>
+
+    <!-- Testimonials & FAQ -->
+    <section>
+      <h2 class="section-title">What clients say</h2>
+      <div class="grid two-col" style="gap:14px">
+        <div>
+          <div class="testimonial">
+            <strong>Mary K. — Office Manager</strong>
+            <p class="small">"Fast workshop service. Replaced our Konica fuser the same day and the machine has been flawless." — <em>Nairobi CBD</em></p>
+          </div>
+        </div>
+        <div>
+          <div class="testimonial">
+            <strong>James O. — Accountant</strong>
+            <p class="small">"Clear price, original parts. They also configured network printing for all our departments." — <em>Upper Hill</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px">
+        <h3 style="margin:0 0 8px 0; color:var(--accent)">Frequently asked questions</h3>
+        <dl class="faq small">
+          <dt>Do you refill toners?</dt>
+          <dd>No — we only sell new genuine toners and spare parts to ensure printer longevity.</dd>
+          <dt>Do you offer on-site repairs?</dt>
+          <dd>Yes. On-site within Nairobi CBD and surrounding suburbs (additional fee may apply).</dd>
+          <dt>How do I get an exact quotation?</dt>
+          <dd>Send a clear photo (or short video) of the printer and describe the issue via WhatsApp: 0700612345.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact">
+      <h2 class="section-title">Contact & Request Quote</h2>
+      <div class="contact-grid">
+        <div>
+          <form id="contactForm" class="card" onsubmit="event.preventDefault(); sendContact();">
+            <label for="name">Your name</label>
+            <input id="name" required placeholder="e.g., John Mwangi">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com">
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" required placeholder="e.g., 0700 612345">
+            <label for="details">Brief details (model & issue)</label>
+            <textarea id="details" rows="4" placeholder="e.g., Konica Minolta C224 — shows error code E:123"></textarea>
+            <div style="margin-top:10px; display:flex; gap:8px; align-items:center">
+              <button class="btn btn-primary" type="submit">Send Request</button>
+              <a class="btn btn-outline" href="mailto:katumtech@gmail.com">Email Us</a>
+            </div>
+            <p class="small" style="margin-top:10px">Or send photos/videos directly on WhatsApp: <a href="https://wa.me/254700612345" style="color:var(--accent)">0700612345</a></p>
+            <div id="formStatus" class="small" style="margin-top:8px;color:var(--muted)"></div>
+          </form>
+        </div>
+
+        <div>
+          <div class="card" style="padding:14px">
+            <strong>Our Location (Nairobi CBD)</strong>
+            <p class="small">Drop off for workshop repairs during working hours. We also do pick-up & delivery for corporate clients.</p>
+            <!-- Google Maps embed to Nairobi CBD (fallback generic map) -->
+            <iframe class="map-embed" src="https://www.google.com/maps?q=Nairobi+CBD&output=embed" loading="lazy" title="Katumtech Engineers - Nairobi CBD"></iframe>
+            <p class="small" style="margin-top:8px">Postal / Area code: 00100</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> Katumtech Engineers — Nairobi CBD · <a href="https://katumtechengineers.com" style="color:var(--accent); text-decoration:none">katumtechengineers.com</a></div>
+    </footer>
+
+    <!-- WhatsApp floating -->
+    <a class="whatsapp" href="https://wa.me/254700612345" target="_blank" rel="noopener">WhatsApp • 0700612345</a>
+  </div>
+
+  <script>
+    // small helpers: show year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple contact "send" that opens WhatsApp with the message (useful without server)
+    function sendContact(){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const details = document.getElementById('details').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const status = document.getElementById('formStatus');
+
+      if(!name || !phone){ status.textContent = 'Please enter name and phone.'; return; }
+
+      const message = encodeURIComponent(
+        `Katumtech Engineers - Quote request:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nDetails: ${details}`
+      );
+
+      // open WhatsApp — user can send directly; works cross-device
+      window.open('https://wa.me/254700612345?text=' + message, '_blank');
+      status.textContent = 'Opening WhatsApp to send your request. If nothing opens, please send a message directly to 0700612345.';
+    }
+  </script>
 </body>
 </html>
+
 
 
 
