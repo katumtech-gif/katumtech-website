@@ -1,324 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Katumtech Engineers</title>
-<style>
-:root{
-  --bg:#07070b;
-  --blue-1:#051033;
-  --blue-2:#0b4fff;
-  --accent:#2ec4ff;
-  --card:#0f1720;
-  --muted:#9aa8b3;
-  --glass: rgba(255,255,255,0.03);
-}
-/* base */
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef6;}
-/* background image (scrolls with page) + subtle dark overlay for readability */
-body{
-  background:
-    linear-gradient(rgba(2,6,23,0.62), rgba(2,6,23,0.62)),
-    url("https://source.unsplash.com/1600x900/?technology,abstract,blue");
-  background-size:cover;
-  background-position:center;
-  background-attachment:scroll; /* scrolls with the page */
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-/* subtle tech grid overlay */
-body::before{
-  content:"";position:fixed;inset:0;z-index:0;background-image:
-    linear-gradient(transparent 96%, rgba(255,255,255,0.01) 100%),
-    linear-gradient(90deg, transparent 96%, rgba(255,255,255,0.01) 100%);
-  background-size:40px 40px,40px 40px;mix-blend-mode:overlay;pointer-events:none;
-}
-.wrap{max-width:1100px;margin:0 auto;padding:28px;position:relative;z-index:2}
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:sticky;top:0;background:linear-gradient(180deg, rgba(7,7,11,0.45), rgba(7,7,11,0.85));z-index:20;border-bottom:1px solid rgba(255,255,255,0.03)}
-.brand{display:flex;gap:14px;align-items:center}
-.logo{width:56px;height:56px;background:linear-gradient(135deg,var(--blue-1),var(--blue-2));border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:0 6px 18px rgba(11,79,255,0.12)}
-.brand-text .company{font-weight:800;color:#fff;font-size:18px}
-.slogan{color:var(--muted);font-size:13px}
-.main-nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;cursor:pointer}
-.main-nav a.active{color:var(--accent)}
-.content{margin-top:18px;position:relative;z-index:3}
-.card{background:linear-gradient(180deg, rgba(8,12,18,0.55), rgba(10,14,20,0.48));padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);margin-bottom:20px;border:1px solid rgba(255,255,255,0.02)}
-.card-inner{background:transparent;padding:8px}
-.hero{display:flex;gap:30px;align-items:flex-start;flex-wrap:wrap}
-.hero-left{flex:1;min-width:300px}
-.hero h1{font-size:34px;margin:0;color:#f7fcff; text-shadow:0 2px 10px rgba(2,6,23,0.6)}
-.lead{margin-top:10px;color:var(--muted);font-size:16px}
-.cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-.btn{background:linear-gradient(90deg,var(--blue-2),var(--accent));padding:10px 16px;border-radius:10px;color:#021;cursor:pointer;border:none;font-weight:700;text-decoration:none;display:inline-block}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-.quick{margin-top:18px}
-.muted{color:var(--muted)}
-.small{font-size:13px}
-.facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.services-grid-lg{display:grid;grid-template-columns:1fr;gap:14px}
-.service-block{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
-.service-block-lg{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;margin-bottom:8px}
-.brand-pills span{display:inline-block;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));font-weight:700;margin-right:8px;margin-top:8px}
-.brand-pills.large span{padding:10px 14px;font-size:15px}
-.post{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);margin-bottom:12px}
-.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.02)}
-.img-placeholder{height:160px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700;overflow:hidden}
-.img-visible{width:100%;height:auto;border-radius:8px;display:block;box-shadow:0 8px 30px rgba(2,6,23,0.45);border:1px solid rgba(255,255,255,0.03)}
-input, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef6;margin-top:8px}
-@media(max-width:900px){
-  .hero{flex-direction:column}
-  .contact-grid{grid-template-columns:1fr}
-  .facts-grid{grid-template-columns:1fr}
-  .main-nav a{margin-left:12px}
-  .logo{width:48px;height:48px}
-}
-/* small utility */
-.center{display:flex;align-items:center;justify-content:center}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Katumtech Engineers - Quality Prints, Genuine Spares, Professional Repairs in Nairobi CBD. We sell and repair Konica Minolta, HP, Epson, and Canon printers.">
+  <meta name="keywords" content="printer repair Nairobi, Katumtech Engineers, Konica Minolta, HP printer repair, Epson service, Canon service, printer spare parts Kenya">
+  <meta name="author" content="Katumtech Engineers">
+  <title>Katumtech Engineers | Printer Sales & Repairs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: linear-gradient(to bottom right, #0a0a0a, #1b1b1b);
+      background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #00bcd4;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 30px auto;
+      width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00bcd4;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">KE</div>
-      <div class="brand-text">
-        <div class="company">Katumtech Engineers</div>
-        <div class="slogan">Keeping Nairobi printing — one page at a time</div>
-      </div>
-    </div>
-    <nav class="main-nav">
-      <a class="nav-link active" href="#home">Home</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#services">Services</a>
-      <a class="nav-link" href="#brands">Brands</a>
-      <a class="nav-link" href="#blog">Blog</a>
-      <a class="nav-link" href="#contact">Contact</a>
+  <header>
+    <h1>Katumtech Engineers</h1>
+    <p>Quality Prints, Genuine Spares, Professional Repairs</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="content">
-    <!-- HOME -->
-    <section id="home" class="card hero">
-      <div class="hero-left">
-        <h1>Reliable printers, genuine toners & fast repairs</h1>
-        <p class="lead">Trusted printer sales, genuine parts and professional repairs across Nairobi.</p>
-        <div class="cta">
-          <a class="btn" href="#services">Our Services</a>
-          <a class="btn ghost" href="#contact">Contact Us</a>
-        </div>
+  <section id="home">
+    <h2>Welcome to Katumtech Engineers</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      We are a Nairobi CBD-based company specializing in printer sales, repairs, and genuine spare parts. 
+      Our expert technicians handle brands like Konica Minolta, HP, Epson, and Canon with precision and professionalism.
+    </p>
+  </section>
 
-        <div class="quick card-inner">
-          <h3>Quick facts</h3>
-          <p class="muted small">Location: Nairobi CBD • Email: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a> • WhatsApp / Phone: <a href="tel:+254700612345">0700612345</a></p>
-          <div class="facts-grid">
-            <div>
-              <strong>What we sell</strong>
-              <p class="muted small">New printers, genuine manufacturer toners, and original spare parts. We do <strong>not</strong> refill toners — we sell genuine replacements.</p>
-            </div>
-            <div>
-              <strong>Why clients choose us</strong>
-              <ul class="muted small">
-                <li>Genuine parts and transparent pricing</li>
-                <li>Fast turnaround for repairs</li>
-                <li>Clear warranty & testing</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <aside class="hero-right card-inner" style="min-width:300px;max-width:360px">
-        <h3>Request a Quote</h3>
-        <p class="muted small">Tell us your printer model and issue — we'll respond quickly.</p>
-        <form id="quoteForm" onsubmit="handleQuote(event)">
-          <input name="name" placeholder="Your name" required />
-          <input name="phone" placeholder="Phone / WhatsApp" required />
-          <input name="model" placeholder="Printer model (e.g., HP LaserJet Pro M404)" />
-          <textarea name="message" rows="3" placeholder="Describe the issue or what you need"></textarea>
-          <button class="btn" type="submit">Send Quote Request</button>
-        </form>
-        <p class="muted small" style="margin-top:10px">Or call/WhatsApp: <strong>0700612345</strong></p>
-        <!-- visible image -->
-        <div style="margin-top:12px" class="img-placeholder center">
-          <img class="img-visible" src="https://source.unsplash.com/800x600/?printer,office" alt="Printer example">
-        </div>
-      </aside>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="card">
-      <h1>About Katumtech Engineers</h1>
-      <p class="muted">Founded in Nairobi, Katumtech Engineers is a dedicated printer sales and service company focused on delivering reliable printing solutions to small businesses, corporates, schools and government offices. Our team is built from experienced technicians and procurement specialists who understand printer lifecycles, replacement costs, and the importance of uptime.</p>
-      <h3>Our mission</h3>
-      <p class="muted">To provide honest, cost-effective printing solutions that keep offices productive and equipment performing optimally.</p>
-      <h3>Our values</h3>
-      <ul class="muted">
-        <li>Transparency — clear pricing and genuine parts.</li>
-        <li>Speed — fast diagnostics and repairs.</li>
-        <li>Professionalism — trained technicians and documentation.</li>
-        <li>Customer-first — warranty and follow-up support.</li>
-      </ul>
-      <h3>Team & capabilities</h3>
-      <p class="muted">We handle installations, maintenance contracts, emergency repairs and spare parts procurement. Our technicians are trained on brands including HP, Canon, Epson, Nashuatec and more. We provide both on-site servicing and in-shop repairs.</p>
-
-      <!-- realistic image placeholder (technician) -->
-      <div class="img-placeholder" style="margin-top:12px">
-        <img class="img-visible" src="https://source.unsplash.com/900x600/?technician,repair,printer" alt="Technician repairing a printer">
-      </div>
-
-      <div style="margin-top:18px"><a class="btn" href="#home">Back to Top</a></div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="card">
-      <h1>Services</h1>
-      <div class="services-grid-lg">
-        <div class="service-block-lg">
-          <h3>Printer Sales</h3>
-          <p class="muted">We supply new printers suited to workload — from small offices to larger corporates. We advise on duty cycle, features, and total cost of ownership.</p>
-        </div>
-        <div class="service-block-lg">
-          <h3>Genuine Toners & Parts</h3>
-          <p class="muted">We stock genuine manufacturer toners and common spare parts. We do not offer refills — only authentic replacements for reliability.</p>
-        </div>
-        <div class="service-block-lg">
-          <h3>Repairs & Diagnostics</h3>
-          <p class="muted">On-site and in-shop repairs: fault isolation, parts replacement, firmware updates and thorough testing.</p>
-        </div>
-        <div class="service-block-lg">
-          <h3>Preventive Maintenance</h3>
-          <p class="muted">Scheduled maintenance plans to keep your printers reliable and reduce unplanned downtime.</p>
-        </div>
-      </div>
-
-      <!-- realistic service photo -->
-      <div style="margin-top:12px" class="img-placeholder">
-        <img class="img-visible" src="https://source.unsplash.com/1000x600/?printer,spare-parts,workshop" alt="Printer spare parts and workshop">
-      </div>
-
-      <div style="margin-top:18px"><a class="btn" href="#home">Back to Top</a></div>
-    </section>
-
-    <!-- BRANDS -->
-    <section id="brands" class="card">
-      <h1>Brands we support</h1>
-      <div class="brand-pills large" style="margin-top:12px">
-        <span>HP</span><span>Canon</span><span>Epson</span><span>Nashuatec</span><span>Brother</span><span>Xerox</span>
-      </div>
-      <p class="muted" style="margin-top:12px">We stock genuine toners and spare parts. If you don’t see a brand, contact us — we likely support it or can source parts.</p>
-
-      <!-- brand-related visuals -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px">
-        <img class="img-visible" src="https://source.unsplash.com/600x400/?hp,printer" alt="HP printer">
-        <img class="img-visible" src="https://source.unsplash.com/600x400/?canon,printer" alt="Canon printer">
-        <img class="img-visible" src="https://source.unsplash.com/600x400/?epson,printer" alt="Epson printer">
-      </div>
-
-      <div style="margin-top:18px"><a class="btn" href="#home">Back to Top</a></div>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="card">
-      <h1>Blog & Guides</h1>
-      <article class="post">
-        <h3>Keeping your office printer healthy</h3>
-        <p class="muted small">Simple maintenance tips to avoid breakdowns and prolong toner life.</p>
-      </article>
-      <article class="post">
-        <h3>Choosing the right printer for a small office</h3>
-        <p class="muted small">How to match monthly duty cycle to your workload.</p>
-      </article>
-      <div style="margin-top:18px"><a class="btn" href="#home">Back to Top</a></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card">
-      <h1>Contact</h1>
-      <div class="contact-grid">
-        <div>
-          <h3>Contact details</h3>
-          <p class="muted small">Email: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a><br/>Phone/WhatsApp: <a href="tel:+254700612345">0700612345</a><br/>Address: Nairobi CBD</p>
-
-          <h3>Book a Repair</h3>
-          <form id="repairForm" onsubmit="handleRepair(event)">
-            <input name="rname" placeholder="Your name" required />
-            <input name="rphone" placeholder="Phone / WhatsApp" required />
-            <input name="rmodel" placeholder="Printer model" />
-            <textarea name="rmessage" rows="3" placeholder="Describe the fault or issue"></textarea>
-            <button class="btn" type="submit">Send Repair Request</button>
-          </form>
-        </div>
-
-        <div>
-          <h3>Business enquiries</h3>
-          <p class="muted small">Corporate accounts, maintenance contracts or bulk toner supply: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></p>
-
-          <h3>Office hours</h3>
-          <p class="muted small">Mon - Fri: 9:00 — 18:00 • Sat: 9:00 — 13:00 • Sun: Closed</p>
-
-          <div class="img-placeholder" style="margin-top:12px">
-            <img class="img-visible" src="https://source.unsplash.com/800x600/?office,printer,team" alt="Office printer environment">
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:18px"><a class="btn" href="#home">Back to Top</a></div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer card">
-    <div class="footer-inner">
-      <div>© Katumtech Engineers — Nairobi • Genuine toners & original parts</div>
-      <div class="muted small">Contact: <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></div>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="Printer Repair Service">
+      <img src="https://images.unsplash.com/photo-1612817159949-1922e7f9e1cc?auto=format&fit=crop&w=800&q=80" alt="Printer Parts">
+      <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=800&q=80" alt="Office Printers">
     </div>
+    <p style="text-align:center; max-width:700px; margin:30px auto;">
+      We offer professional printer repairs, genuine spare part sales, and new printer installations. 
+      No toner refills — only authentic parts to ensure durability and top performance.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <!-- Replace these placeholder links with your real photo filenames -->
+      <img src="images/konica-minolta-c250ijpg" alt="Konica Minolta C250i Printer">
+      <img src="images/konica-minolta developer-unit.jpg" alt="HP Printer Repair">
+      <img src="images/epson-printer-service.jpg" alt="Epson Printer Service">
+      <img src="images/canon-printer-spares.jpg" alt="Canon Printer Spares">
+      <img src="images/technician-working.jpg" alt="Technician Working on Printer">
+      <img src="images/office-view.jpg" alt="Katumtech Engineers Workshop">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254700612345">0700612345</a></p>
+      <p><strong>Email:</strong> <a href="mailto:katumtech@gmail.com">katumtech@gmail.com</a></p>
+      <p><strong>Location:</strong> Nairobi CBD, Kenya</p>
+      <p><strong>Website:</strong> <a href="https://katumtechengineers.com" target="_blank">katumtechengineers.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Katumtech Engineers | All Rights Reserved</p>
   </footer>
-</div>
-
-<script>
-// smooth scroll nav and highlight
-document.querySelectorAll('.main-nav a').forEach(a=>{
-  a.addEventListener('click', e=>{
-    e.preventDefault();
-    const id = a.getAttribute('href');
-    const target = document.querySelector(id);
-    if(target) target.scrollIntoView({behavior:'smooth'});
-    // update active state
-    document.querySelectorAll('.main-nav a').forEach(x=>x.classList.remove('active'));
-    a.classList.add('active');
-  });
-});
-
-// Mailto-based forms (no server)
-function handleQuote(e){
-  e.preventDefault();
-  const f = e.target;
-  const name = f.name?.value || '[no name]';
-  const phone = f.phone?.value || '';
-  const model = f.model?.value || '';
-  const message = f.message?.value || '';
-  const body = encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nModel: '+model+'\nMessage: '+message);
-  window.location.href = 'mailto:katumtech@gmail.com?subject=' + encodeURIComponent('Quote request from '+name) + '&body=' + body;
-}
-function handleRepair(e){
-  e.preventDefault();
-  const f = e.target;
-  const name = f.rname?.value || '[no name]';
-  const phone = f.rphone?.value || '';
-  const model = f.rmodel?.value || '';
-  const message = f.rmessage?.value || '';
-  const body = encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nModel: '+model+'\nMessage: '+message);
-  window.location.href = 'mailto:katumtech@gmail.com?subject=' + encodeURIComponent('Repair request from '+name) + '&body=' + body;
-}
-
-// ensure images are loaded but remain responsive (no extra action needed since we used <img>)
-</script>
 </body>
 </html>
+
 
 
 
